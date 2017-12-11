@@ -1,6 +1,6 @@
 require "administrate/base_dashboard"
 
-class UserDashboard < Administrate::BaseDashboard
+class AccountDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -9,15 +9,13 @@ class UserDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
+    code: Field::String,
+    title: Field::String,
+    active: Field::Boolean,
+    default_user_id: Field::Number,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
-    email: Field::String,
-    encrypted_password: Field::String,
-    confirmation_token: Field::String,
-    remember_token: Field::String,
-    login_token: Field::String,
-    login_token_sent: Field::DateTime,
-    accounts: Field::HasMany,
+    users: Field::HasMany,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -26,33 +24,37 @@ class UserDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
-    :id,
-    :email,
+    :code,
+    :title,
+    :active,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
     :id,
+    :code,
+    :title,
+    :active,
+    :default_user_id,
+    :users,
     :created_at,
     :updated_at,
-    :email,
-    :accounts,
-    :login_token_sent,
   ].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-    :email,
-    :accounts
+    :title,
+    :active,
+    :default_user_id,
   ].freeze
 
-  # Overwrite this method to customize how users are displayed
+  # Overwrite this method to customize how accounts are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(user)
-  #   "User ##{user.id}"
-  # end
+  def display_resource(account)
+    "#{account.title}"
+  end
 end
