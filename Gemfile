@@ -66,8 +66,10 @@ gem 'neat', '~> 2.1'
 gem 'refills', group: [:development, :test]
 
 gem "slim-rails"
-gem "clearance"
+# gem "clearance"
+gem "sorcery"
 gem "bootstrap"
 gem "active_interaction"
 gem "administrate"
 gem "ulid"
+gem "pundit"

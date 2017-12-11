@@ -1,4 +1,4 @@
-- if signed_in?
+- if logged_in?
   h1 Welcome, #{current_user}!
 - else
   = simple_form_for Authentication::Email.new, url: login_email_path do |f|

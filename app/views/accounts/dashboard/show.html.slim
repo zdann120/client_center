@@ -1,2 +1,5 @@
-h1 Accounts::Dashboard#show
-p Find me in app/views/accounts/dashboard/show.html.slim
+h1 = @account.title
+table.table
+  tr
+    th Account #
+    td = @account.code

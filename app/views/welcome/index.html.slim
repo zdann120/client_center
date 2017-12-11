@@ -1,7 +1,7 @@
 .container
   = render 'email_login'
   hr
-  - if signed_in?
+  - if logged_in?
     .row
       .col-md-4
         h4 Please select an account:

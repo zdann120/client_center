@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  include Clearance::User
+  authenticates_with_sorcery!
   has_secure_token :login_token
 
   has_many :user_accounts

@@ -14,7 +14,7 @@ class Authentication::EmailController < ApplicationController
     @token = params[:token]
     if User.exists?(login_token: @token)
       @user = User.find_by_login_token(@token)
-      sign_in @user
+      auto_login @user
       @user.clear_login_token!
       @user.login_token_sent = nil
       @user.save
