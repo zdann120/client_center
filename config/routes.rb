@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    resources :users
+
+    root to: "users#index"
+  end
+
   get 'welcome/index'
   get 'auth/email/:token', to: 'authentication/email#process_token',
     as: 'process_email_token'
