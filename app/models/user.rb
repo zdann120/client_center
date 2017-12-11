@@ -5,6 +5,10 @@ class User < ApplicationRecord
   has_many :user_accounts
   has_many :accounts, through: :user_accounts
 
+  def to_s
+    email
+  end
+
   def clear_login_token!
     self.login_token = nil
     save

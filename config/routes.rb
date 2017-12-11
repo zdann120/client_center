@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  namespace :accounts do
+    get '/:code', to: 'dashboard#show'
+  end
+
   namespace :admin do
     resources :users
     resources :accounts
