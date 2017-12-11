@@ -1,0 +1,6 @@
+- if signed_in?
+  h1 Welcome, #{current_user}!
+- else
+  = simple_form_for Authentication::Email.new, url: login_email_path do |f|
+    = f.input :email
+    = f.submit 'Login', class: 'btn btn-primary'
