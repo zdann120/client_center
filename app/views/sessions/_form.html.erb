@@ -1,16 +1,10 @@
-<%= form_for :session, url: session_path do |form| %>
-  <div class="text-field">
-    <%= form.label :email %>
-    <%= form.text_field :email, type: 'email' %>
-  </div>
+<%= simple_form_for :session, url: session_path do |form| %>
+    <%= form.input :email %>
 
-  <div class="password-field">
-    <%= form.label :password %>
-    <%= form.password_field :password %>
-  </div>
+    <%= form.input :password %>
 
   <div class="submit-field">
-    <%= form.submit %>
+    <%= form.submit class: 'btn btn-primary' %>
   </div>
 
   <div class="other-links">

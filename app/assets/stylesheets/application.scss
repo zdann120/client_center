@@ -9,3 +9,7 @@
 //@import "refills/flashes";
 
 @import "bootstrap";
+
+.alert-notice {
+  @extend .alert-info;
+}

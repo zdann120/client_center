@@ -10,7 +10,11 @@ html[lang="en"]
     = csrf_meta_tags
   body[class="#{body_class}"]
     = render 'navbar'
-    = render "flashes"
-    = yield
+    br
+    br
+    br
+    .container
+      = render "flashes"
+      = yield
     = render "javascript"
     = render "css_overrides"
