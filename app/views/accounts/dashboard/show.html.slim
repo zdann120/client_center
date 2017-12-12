@@ -7,3 +7,15 @@ h3 Actions
 .btn-group
   = link_to 'View Receipts', account_receipts_path(@account),
     class: 'btn btn-primary btn-lg'
+
+h3 Documents
+table.table
+  thead
+    tr
+      th Description
+      th 
+  tbody
+    - @account.documents.each do |doc|
+      tr
+        td = doc.description
+        td = link_to 'View', doc.asset.url, target: '_blank'

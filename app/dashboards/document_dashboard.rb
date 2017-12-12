@@ -1,6 +1,6 @@
 require "administrate/base_dashboard"
 
-class ReceiptDashboard < Administrate::BaseDashboard
+class DocumentDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -9,15 +9,11 @@ class ReceiptDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     account: Field::BelongsTo,
-    charges: Field::HasMany,
-    ledger_items: Field::NestedHasMany,
     id: Field::Number,
-    type: Field::String,
-    reference_code: Field::String,
+    asset: CarrierwaveField,
+    description: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
-    description: Field::Text,
-    subtotal: Field::Text
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -27,9 +23,9 @@ class ReceiptDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :account,
-    :charges,
-    :subtotal,
     :id,
+    :asset,
+    :created_at,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -37,10 +33,8 @@ class ReceiptDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :account,
     :description,
-    :charges,
-    :subtotal,
     :id,
-    :reference_code,
+    :asset,
     :created_at,
     :updated_at,
   ].freeze
@@ -51,14 +45,13 @@ class ReceiptDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :account,
     :description,
-    :charges,
-    :ledger_items
+    :asset,
   ].freeze
 
-  # Overwrite this method to customize how receipts are displayed
+  # Overwrite this method to customize how documents are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(receipt)
-  #   "Receipt ##{receipt.id}"
+  # def display_resource(document)
+  #   "Document ##{document.id}"
   # end
 end

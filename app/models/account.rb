@@ -4,11 +4,9 @@ class Account < ApplicationRecord
   has_many :user_accounts
   has_many :users, through: :user_accounts
   has_many :receipts
-
-  def default_contact
-    return 0 if default_contact_id == 0
-    User.find(default_contact_id)
-  end
+  has_many :documents
+  belongs_to :default_user, class_name: 'User',
+    foreign_key: 'default_user_id'
 
   private
 

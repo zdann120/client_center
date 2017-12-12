@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  namespace :accounts do
+    get 'documents/show'
+  end
+
+  namespace :accounts do
+    get 'documents/new'
+  end
+
   namespace :users do
     resource :contact
   end
@@ -11,9 +19,11 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :users
     resources :accounts
-    resources :contacts
-    resources :receipts
+    resources :contacts, except: [:index]
+    resources :receipts do
+    end
     resources :charges
+    resources :documents
     root to: "users#index"
   end
 

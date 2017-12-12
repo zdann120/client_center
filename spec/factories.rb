@@ -1,4 +1,8 @@
 FactoryGirl.define do
+  factory :document do
+    account nil
+    asset "MyString"
+  end
   factory :ledger_item do
     ledger nil
     description "MyString"

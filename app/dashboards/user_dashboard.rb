@@ -52,6 +52,7 @@ class UserDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
     :email,
+    :contact,
     :accounts,
     :role
   ].freeze
