@@ -5,7 +5,6 @@ nav.navbar.navbar-expand-md.navbar-dark.bg-dark.fixed-top
   #navbarsExampleDefault.collapse.navbar-collapse
     ul.navbar-nav.mr-auto
       li.nav-item = link_to 'Home', root_path, class: 'nav-link'
-      li.nav-item
-        a.nav-link href="#"  Link
-      li.nav-item
-        a.nav-link.disabled href="#"  Disabled
+      - if logged_in?
+        li.nav-item = link_to 'Logout', logout_path, method: :delete,
+          class: 'nav-link'

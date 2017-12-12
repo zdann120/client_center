@@ -4,7 +4,7 @@ class Authentication::EmailController < ApplicationController
   def create
     @outcome = Authentication::Email.run!(login_params)
     if @outcome
-      redirect_to root_url, notice: "Success: Login token is #{@outcome}"
+      redirect_to root_url, notice: "Success! Please check your email."
     else
       redirect_to root_url, notice: "Trouble logging in."
     end
@@ -22,6 +22,11 @@ class Authentication::EmailController < ApplicationController
     else
       redirect_to root_url, notice: 'Sorry, no luck.'
     end
+  end
+
+  def logout
+    reset_session
+    redirect_to root_url, :notice => "Logged out!"
   end
 
   private
