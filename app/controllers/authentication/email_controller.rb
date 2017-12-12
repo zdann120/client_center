@@ -6,7 +6,7 @@ class Authentication::EmailController < ApplicationController
     if @outcome
       redirect_to root_url, notice: "Success! Please check your email."
     else
-      redirect_to root_url, notice: "Trouble logging in."
+      redirect_to root_url, notice: "Sorry, the email address you provided was not located in our records. Please try again, or contact us if you believe this is an error."
     end
   end
 
@@ -20,7 +20,7 @@ class Authentication::EmailController < ApplicationController
       @user.save
       redirect_to root_url, notice: 'Welcome!'
     else
-      redirect_to root_url, notice: 'Sorry, no luck.'
+      redirect_to root_url, alert: 'Sorry, this login link has expired or has already been used.'
     end
   end
 
@@ -37,6 +37,6 @@ class Authentication::EmailController < ApplicationController
 
   def invalid_interaction
     redirect_to root_url,
-      notice: "Sorry, there was a problem. Try a different email address."
+      alert: "Sorry, the email address you provided was not located in our records. Please try again, or contact us if you believe this is an error."
   end
 end

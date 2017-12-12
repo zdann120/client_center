@@ -45,25 +45,12 @@ class ContactDashboard < Administrate::BaseDashboard
     :id,
     :first_name,
     :last_name,
-    :business_name,
-    :address_line_1,
-    :address_line_2,
-    :city,
-    :state,
-    :zip_code,
-    :country,
-    :primary_phone,
-    :alternate_phone,
-    :linking_code,
-    :created_at,
-    :updated_at,
   ].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-    :contactable,
     :first_name,
     :last_name,
     :business_name,
@@ -75,7 +62,6 @@ class ContactDashboard < Administrate::BaseDashboard
     :country,
     :primary_phone,
     :alternate_phone,
-    :linking_code,
   ].freeze
 
   # Overwrite this method to customize how contacts are displayed
