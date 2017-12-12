@@ -23,7 +23,7 @@ ActiveAdmin.register Charge do
     end
   end
 
-  action_item :back_to_receipt do
+  action_item :back_to_receipt, only: :show do
     link_to 'View Receipt', admin_receipt_path(charge.receipt)
   end
 
