@@ -47,4 +47,8 @@ ActiveAdmin.register Receipt do
     end
   end
 
+  action_item :edit_charges, only: :show do
+    link_to 'Edit Charges', admin_receipt_charges_path(receipt)
+  end
+
 end

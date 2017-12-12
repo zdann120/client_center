@@ -1,0 +1,126 @@
+                            Prefix Verb   URI Pattern                                                Controller#Action
+                        admin_root GET    /admin(.:format)                                           admin/dashboard#index
+                   admin_dashboard GET    /admin/dashboard(.:format)                                 admin/dashboard#index
+batch_action_admin_receipt_charges POST   /admin/receipts/:receipt_id/charges/batch_action(.:format) admin/charges#batch_action
+             admin_receipt_charges GET    /admin/receipts/:receipt_id/charges(.:format)              admin/charges#index
+                                   POST   /admin/receipts/:receipt_id/charges(.:format)              admin/charges#create
+          new_admin_receipt_charge GET    /admin/receipts/:receipt_id/charges/new(.:format)          admin/charges#new
+         edit_admin_receipt_charge GET    /admin/receipts/:receipt_id/charges/:id/edit(.:format)     admin/charges#edit
+              admin_receipt_charge GET    /admin/receipts/:receipt_id/charges/:id(.:format)          admin/charges#show
+                                   PATCH  /admin/receipts/:receipt_id/charges/:id(.:format)          admin/charges#update
+                                   PUT    /admin/receipts/:receipt_id/charges/:id(.:format)          admin/charges#update
+                                   DELETE /admin/receipts/:receipt_id/charges/:id(.:format)          admin/charges#destroy
+      batch_action_admin_documents POST   /admin/documents/batch_action(.:format)                    admin/documents#batch_action
+                   admin_documents GET    /admin/documents(.:format)                                 admin/documents#index
+                                   POST   /admin/documents(.:format)                                 admin/documents#create
+                new_admin_document GET    /admin/documents/new(.:format)                             admin/documents#new
+               edit_admin_document GET    /admin/documents/:id/edit(.:format)                        admin/documents#edit
+                    admin_document GET    /admin/documents/:id(.:format)                             admin/documents#show
+                                   PATCH  /admin/documents/:id(.:format)                             admin/documents#update
+                                   PUT    /admin/documents/:id(.:format)                             admin/documents#update
+                                   DELETE /admin/documents/:id(.:format)                             admin/documents#destroy
+       batch_action_admin_receipts POST   /admin/receipts/batch_action(.:format)                     admin/receipts#batch_action
+                    admin_receipts GET    /admin/receipts(.:format)                                  admin/receipts#index
+                                   POST   /admin/receipts(.:format)                                  admin/receipts#create
+                 new_admin_receipt GET    /admin/receipts/new(.:format)                              admin/receipts#new
+                edit_admin_receipt GET    /admin/receipts/:id/edit(.:format)                         admin/receipts#edit
+                     admin_receipt GET    /admin/receipts/:id(.:format)                              admin/receipts#show
+                                   PATCH  /admin/receipts/:id(.:format)                              admin/receipts#update
+                                   PUT    /admin/receipts/:id(.:format)                              admin/receipts#update
+                                   DELETE /admin/receipts/:id(.:format)                              admin/receipts#destroy
+       batch_action_admin_contacts POST   /admin/contacts/batch_action(.:format)                     admin/contacts#batch_action
+                    admin_contacts GET    /admin/contacts(.:format)                                  admin/contacts#index
+                                   POST   /admin/contacts(.:format)                                  admin/contacts#create
+                 new_admin_contact GET    /admin/contacts/new(.:format)                              admin/contacts#new
+                edit_admin_contact GET    /admin/contacts/:id/edit(.:format)                         admin/contacts#edit
+                     admin_contact GET    /admin/contacts/:id(.:format)                              admin/contacts#show
+                                   PATCH  /admin/contacts/:id(.:format)                              admin/contacts#update
+                                   PUT    /admin/contacts/:id(.:format)                              admin/contacts#update
+                                   DELETE /admin/contacts/:id(.:format)                              admin/contacts#destroy
+       batch_action_admin_accounts POST   /admin/accounts/batch_action(.:format)                     admin/accounts#batch_action
+                    admin_accounts GET    /admin/accounts(.:format)                                  admin/accounts#index
+                                   POST   /admin/accounts(.:format)                                  admin/accounts#create
+                 new_admin_account GET    /admin/accounts/new(.:format)                              admin/accounts#new
+                edit_admin_account GET    /admin/accounts/:id/edit(.:format)                         admin/accounts#edit
+                     admin_account GET    /admin/accounts/:id(.:format)                              admin/accounts#show
+                                   PATCH  /admin/accounts/:id(.:format)                              admin/accounts#update
+                                   PUT    /admin/accounts/:id(.:format)                              admin/accounts#update
+                                   DELETE /admin/accounts/:id(.:format)                              admin/accounts#destroy
+          batch_action_admin_users POST   /admin/users/batch_action(.:format)                        admin/users#batch_action
+                       admin_users GET    /admin/users(.:format)                                     admin/users#index
+                                   POST   /admin/users(.:format)                                     admin/users#create
+                    new_admin_user GET    /admin/users/new(.:format)                                 admin/users#new
+                   edit_admin_user GET    /admin/users/:id/edit(.:format)                            admin/users#edit
+                        admin_user GET    /admin/users/:id(.:format)                                 admin/users#show
+                                   PATCH  /admin/users/:id(.:format)                                 admin/users#update
+                                   PUT    /admin/users/:id(.:format)                                 admin/users#update
+                                   DELETE /admin/users/:id(.:format)                                 admin/users#destroy
+                    admin_comments GET    /admin/comments(.:format)                                  admin/comments#index
+                                   POST   /admin/comments(.:format)                                  admin/comments#create
+                     admin_comment GET    /admin/comments/:id(.:format)                              admin/comments#show
+                                   DELETE /admin/comments/:id(.:format)                              admin/comments#destroy
+           accounts_documents_show GET    /accounts/documents/show(.:format)                         accounts/documents#show
+            accounts_documents_new GET    /accounts/documents/new(.:format)                          accounts/documents#new
+                 new_users_contact GET    /users/contact/new(.:format)                               users/contacts#new
+                edit_users_contact GET    /users/contact/edit(.:format)                              users/contacts#edit
+                     users_contact GET    /users/contact(.:format)                                   users/contacts#show
+                                   PATCH  /users/contact(.:format)                                   users/contacts#update
+                                   PUT    /users/contact(.:format)                                   users/contacts#update
+                                   DELETE /users/contact(.:format)                                   users/contacts#destroy
+                                   POST   /users/contact(.:format)                                   users/contacts#create
+                  account_receipts GET    /accounts/:account_id/receipts(.:format)                   accounts/receipts#index
+                   account_receipt GET    /accounts/:account_id/receipts/:id(.:format)               accounts/receipts#show
+                           account GET    /accounts/:id(.:format)                                    accounts/dashboard#show
+                                   GET    /admin/users(.:format)                                     admin/users#index
+                                   POST   /admin/users(.:format)                                     admin/users#create
+                                   GET    /admin/users/new(.:format)                                 admin/users#new
+                                   GET    /admin/users/:id/edit(.:format)                            admin/users#edit
+                                   GET    /admin/users/:id(.:format)                                 admin/users#show
+                                   PATCH  /admin/users/:id(.:format)                                 admin/users#update
+                                   PUT    /admin/users/:id(.:format)                                 admin/users#update
+                                   DELETE /admin/users/:id(.:format)                                 admin/users#destroy
+                                   GET    /admin/accounts(.:format)                                  admin/accounts#index
+                                   POST   /admin/accounts(.:format)                                  admin/accounts#create
+                                   GET    /admin/accounts/new(.:format)                              admin/accounts#new
+                                   GET    /admin/accounts/:id/edit(.:format)                         admin/accounts#edit
+                                   GET    /admin/accounts/:id(.:format)                              admin/accounts#show
+                                   PATCH  /admin/accounts/:id(.:format)                              admin/accounts#update
+                                   PUT    /admin/accounts/:id(.:format)                              admin/accounts#update
+                                   DELETE /admin/accounts/:id(.:format)                              admin/accounts#destroy
+                                   GET    /admin/contacts(.:format)                                  admin/contacts#index
+                                   GET    /admin/contacts/:id/edit(.:format)                         admin/contacts#edit
+                                   GET    /admin/contacts/:id(.:format)                              admin/contacts#show
+                                   PATCH  /admin/contacts/:id(.:format)                              admin/contacts#update
+                                   PUT    /admin/contacts/:id(.:format)                              admin/contacts#update
+                                   GET    /admin/receipts(.:format)                                  admin/receipts#index
+                                   POST   /admin/receipts(.:format)                                  admin/receipts#create
+                                   GET    /admin/receipts/new(.:format)                              admin/receipts#new
+                                   GET    /admin/receipts/:id/edit(.:format)                         admin/receipts#edit
+                                   GET    /admin/receipts/:id(.:format)                              admin/receipts#show
+                                   PATCH  /admin/receipts/:id(.:format)                              admin/receipts#update
+                                   PUT    /admin/receipts/:id(.:format)                              admin/receipts#update
+                                   DELETE /admin/receipts/:id(.:format)                              admin/receipts#destroy
+                     admin_charges GET    /admin/charges(.:format)                                   admin/charges#index
+                                   POST   /admin/charges(.:format)                                   admin/charges#create
+                  new_admin_charge GET    /admin/charges/new(.:format)                               admin/charges#new
+                 edit_admin_charge GET    /admin/charges/:id/edit(.:format)                          admin/charges#edit
+                      admin_charge GET    /admin/charges/:id(.:format)                               admin/charges#show
+                                   PATCH  /admin/charges/:id(.:format)                               admin/charges#update
+                                   PUT    /admin/charges/:id(.:format)                               admin/charges#update
+                                   DELETE /admin/charges/:id(.:format)                               admin/charges#destroy
+                                   GET    /admin/documents(.:format)                                 admin/documents#index
+                                   POST   /admin/documents(.:format)                                 admin/documents#create
+                                   GET    /admin/documents/new(.:format)                             admin/documents#new
+                                   GET    /admin/documents/:id/edit(.:format)                        admin/documents#edit
+                                   GET    /admin/documents/:id(.:format)                             admin/documents#show
+                                   PATCH  /admin/documents/:id(.:format)                             admin/documents#update
+                                   PUT    /admin/documents/:id(.:format)                             admin/documents#update
+                                   DELETE /admin/documents/:id(.:format)                             admin/documents#destroy
+                                   GET    /admin(.:format)                                           admin/users#index
+                     welcome_index GET    /welcome/index(.:format)                                   welcome#index
+               process_email_token GET    /auth/email/:token(.:format)                               authentication/email#process_token
+                            logout DELETE /logout(.:format)                                          authentication/email#logout
+                       login_email POST   /login/email(.:format)                                     authentication/email#create
+                              root GET    /                                                          welcome#index
+                       sidekiq_web        /sidekiq                                                   Sidekiq::Web
+                              page GET    /pages/*id                                                 high_voltage/pages#show
