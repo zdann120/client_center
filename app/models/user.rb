@@ -7,6 +7,8 @@ class User < ApplicationRecord
 
   after_create :set_password
 
+  enum role: [:guest, :client, :admin]
+
   def to_s
     email
   end
