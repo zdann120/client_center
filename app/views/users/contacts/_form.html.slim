@@ -1,0 +1,24 @@
+= simple_form_for [:users, @contact] do |f|
+  .row
+    .col-md-6
+      = f.input :first_name
+    .col-md-6
+      = f.input :last_name
+  = f.input :email
+  = f.input :business_name
+  = f.input :address_line_1, label: "Address (Line 1)"
+  = f.input :address_line_2, label: "Address (Line 2)"
+  .row
+    .col-md-4
+      = f.input :city
+    .col-md-4
+      = f.input :state
+    .col-md-4
+      = f.input :zip_code
+  = f.input :country
+  .row
+    .col-md-6
+      = f.input :primary_phone
+    .col-md-6
+      = f.input :alternate_phone
+  = f.submit "Save Data", class: 'btn btn-primary'

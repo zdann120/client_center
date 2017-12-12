@@ -19,6 +19,7 @@ class UserDashboard < Administrate::BaseDashboard
     login_token_sent: Field::DateTime,
     accounts: Field::HasMany,
     role: EnumField,
+    contact: Field::HasOne
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -30,6 +31,7 @@ class UserDashboard < Administrate::BaseDashboard
     :id,
     :email,
     :role,
+    :contact
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -40,6 +42,7 @@ class UserDashboard < Administrate::BaseDashboard
     :created_at,
     :updated_at,
     :email,
+    :contact,
     :accounts,
     :login_token_sent,
   ].freeze
@@ -56,7 +59,7 @@ class UserDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how users are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(user)
-  #   "User ##{user.id}"
-  # end
+  def display_resource(user)
+    "#{user.to_s}"
+  end
 end
