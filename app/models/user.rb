@@ -10,8 +10,10 @@ class User < ApplicationRecord
   has_many :accounts, through: :user_accounts
   has_one :contact, as: :contactable
 
+  accepts_nested_attributes_for :contact
+
   after_create :set_password
-  after_create :create_contact!
+  after_create :create_contact!, if: -> { contact.blank? }
 
   enum role: [:guest, :client, :admin]
 

@@ -2,7 +2,10 @@ ActiveAdmin.register User do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-  permit_params :email, :role, account_ids: []
+  permit_params :email, :role,
+                account_ids: [],
+                contact_attributes: [:id, :first_name, :last_name,:primary_phone, :alternate_phone,
+                :address_line_1, :address_line_2, :city, :state, :zip_code, :country]
 #
 # or
 #
@@ -18,6 +21,21 @@ ActiveAdmin.register User do
       input :role
       input :accounts, as: :check_boxes
     end
+
+    inputs 'Contact Data' do
+      f.has_many :contact, allow_destroy: false, new_record: false do |c|
+        c.input :first_name
+        c.input :last_name
+        c.input :primary_phone
+        c.input :alternate_phone
+        c.input :address_line_1
+        c.input :address_line_2
+        c.input :city
+        c.input :state
+        c.input :zip_code
+        c.input :country
+      end
+    end
     actions
   end
 
@@ -26,7 +44,6 @@ ActiveAdmin.register User do
     attributes_table do
       row :email
       row :role
-      row :contact
       row :accounts do |u|
         ul do
           u.accounts.each do |acc|
