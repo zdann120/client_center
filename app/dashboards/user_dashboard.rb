@@ -18,6 +18,7 @@ class UserDashboard < Administrate::BaseDashboard
     login_token: Field::String,
     login_token_sent: Field::DateTime,
     accounts: Field::HasMany,
+    role: EnumField,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -28,12 +29,14 @@ class UserDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :id,
     :email,
+    :role,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
     :id,
+    :role,
     :created_at,
     :updated_at,
     :email,
@@ -46,7 +49,8 @@ class UserDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
     :email,
-    :accounts
+    :accounts,
+    :role
   ].freeze
 
   # Overwrite this method to customize how users are displayed

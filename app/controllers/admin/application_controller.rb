@@ -10,6 +10,9 @@ module Admin
 
     def authenticate_admin
       # TODO Add authentication logic here.
+      unless current_user && current_user.admin?
+        redirect_to root_url, notice: 'Sorry, you must be an admin.'
+      end
     end
 
     # Override this value to specify the number of elements to display at a time
