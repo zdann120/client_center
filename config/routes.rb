@@ -3,8 +3,9 @@ Rails.application.routes.draw do
     resource :contact
   end
 
-  namespace :accounts do
-    get '/:code', to: 'dashboard#show'
+  resources :accounts, only: [:show], controller: 'accounts/dashboard' do
+    resources :receipts, controller: 'accounts/receipts',
+      only: [:index, :show]
   end
 
   namespace :admin do

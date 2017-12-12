@@ -3,3 +3,7 @@ table.table
   tr
     th Account #
     td = @account.code
+h3 Actions
+.btn-group
+  = link_to 'View Receipts', account_receipts_path(@account),
+    class: 'btn btn-primary btn-lg'

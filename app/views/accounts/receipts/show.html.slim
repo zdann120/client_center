@@ -1,0 +1,25 @@
+h1 View Receipt
+p.lead = @receipt.description
+h4 Line Items
+table.table
+  thead
+    tr
+      th Description
+      th Unit Price
+      th Quantity
+      th UOM
+      th Line Total
+  tbody
+    - @receipt.charges.each do |charge|
+      tr
+        td = charge.description
+        td = charge.unit_price.format
+        td = charge.quantity
+        td = charge.unit_of_measure
+        td.table-warning = charge.line_total.format
+    tr.table-success
+      th[colspan="4"] Subtotal
+      td = @receipt.subtotal.format
+
+
+=< link_to 'Back', account_receipts_path

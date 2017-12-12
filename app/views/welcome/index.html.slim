@@ -8,4 +8,4 @@
       .col-md-8
         ul
           - current_user.accounts.each do |a|
-            li = link_to a.title, accounts_path(a.code)
+            li = link_to a.title, account_path(a.code)

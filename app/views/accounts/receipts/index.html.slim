@@ -1,0 +1,21 @@
+h1 
+  ' Receipts for Account:
+  span.text-muted = @account.title
+
+table.table
+  thead
+    tr
+      th ID
+      th Description
+      th Subtotal
+
+  tbody
+    - @receipts.each do |receipt|
+      tr
+        td = link_to receipt.id, account_receipt_path(@account, receipt.id),
+          class: 'btn btn-sm btn-info'
+        td = receipt.description
+        td = receipt.subtotal.format
+= link_to 'Back to Account', account_path(@account.code), 
+  class: 'btn btn-primary btn-sm'
+
