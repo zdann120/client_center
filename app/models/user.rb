@@ -11,7 +11,7 @@ class User < ApplicationRecord
   has_one :contact, as: :contactable
 
   after_create :set_password
-  after_create :create_contact!
+  #after_create :create_contact!
 
   enum role: [:guest, :client, :admin]
 
