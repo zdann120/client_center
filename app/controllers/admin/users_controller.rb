@@ -17,18 +17,5 @@ module Admin
 
     # See https://administrate-prototype.herokuapp.com/customizing_controller_actions
     # for more information
-    def resource_params
-      params.require(:user)
-        .permit(
-          permitted_attributes,
-          contact_attributes: [
-            :first_name, :last_name,
-            :business_name, :address_line_1,
-            :address_line_2, :city, :state,
-            :zip_code, :primary_phone,
-            :alternate_phone, :country
-          ]
-        )
-    end
   end
 end
