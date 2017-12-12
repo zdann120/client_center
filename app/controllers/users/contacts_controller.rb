@@ -26,7 +26,6 @@ class Users::ContactsController < ApplicationController
       :country,
       :primary_phone,
       :alternate_phone,
-      :email
     )
   end
 end
