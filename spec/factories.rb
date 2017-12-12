@@ -1,4 +1,16 @@
 FactoryGirl.define do
+  factory :ledger_item do
+    ledger nil
+    description "MyString"
+    quantity 1
+    unit_of_measure "MyString"
+    unit_price_cents 1
+  end
+  factory :ledger do
+    type ""
+    reference_code ""
+    account nil
+  end
   factory :contact do
     contactable nil
     first_name "MyString"

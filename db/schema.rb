@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171212004342) do
+ActiveRecord::Schema.define(version: 20171212022907) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,6 +62,29 @@ ActiveRecord::Schema.define(version: 20171212004342) do
     t.index ["priority", "run_at"], name: "delayed_jobs_priority"
   end
 
+  create_table "ledger_items", force: :cascade do |t|
+    t.bigint "ledger_id"
+    t.string "description"
+    t.integer "quantity"
+    t.string "unit_of_measure"
+    t.integer "unit_price_cents"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "type"
+    t.index ["ledger_id"], name: "index_ledger_items_on_ledger_id"
+  end
+
+  create_table "ledgers", force: :cascade do |t|
+    t.string "type"
+    t.string "reference_code"
+    t.bigint "account_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "description"
+    t.index ["account_id"], name: "index_ledgers_on_account_id"
+    t.index ["reference_code"], name: "index_ledgers_on_reference_code", unique: true
+  end
+
   create_table "user_accounts", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "account_id"
@@ -86,6 +109,8 @@ ActiveRecord::Schema.define(version: 20171212004342) do
     t.index ["login_token"], name: "index_users_on_login_token", unique: true
   end
 
+  add_foreign_key "ledger_items", "ledgers"
+  add_foreign_key "ledgers", "accounts"
   add_foreign_key "user_accounts", "accounts"
   add_foreign_key "user_accounts", "users"
 end

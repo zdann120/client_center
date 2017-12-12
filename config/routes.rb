@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     resources :users
     resources :accounts
     resources :contacts
+    resources :receipts
+    resources :charges
     root to: "users#index"
   end
 
