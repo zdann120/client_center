@@ -11,7 +11,7 @@ class Authentication::Email < ActiveInteraction::Base
 
     user = User.find_by_email(email)
     user.regenerate_login_token
-    EmailAuthenticationMailer.send_login_link(user).deliver_now!
+    EmailAuthenticationMailer.send_login_link(user).deliver_later!
     user.update!(login_token_sent: Time.zone.now)
     return user.login_token
   end
