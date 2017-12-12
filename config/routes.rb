@@ -20,4 +20,6 @@ Rails.application.routes.draw do
   delete '/logout', to: 'authentication/email#logout'
   post 'login/email', to: 'authentication/email#create'
   root 'welcome#index'
+  require 'sidekiq/web'
+  mount Sidekiq::Web => '/sidekiq'
 end
