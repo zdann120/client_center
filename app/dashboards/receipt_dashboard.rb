@@ -10,7 +10,7 @@ class ReceiptDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     account: Field::BelongsTo,
     charges: Field::HasMany,
-    ledger_items: Field::NestedHasMany,
+    ledger_items: Field::HasMany,
     id: Field::Number,
     type: Field::String,
     reference_code: Field::String,
