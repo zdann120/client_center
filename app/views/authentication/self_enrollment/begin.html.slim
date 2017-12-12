@@ -1,0 +1,4 @@
+h1 Client Portal Self-Enrollment
+= simple_form_for :account, url: authentication_check_key_path, method: :get do |f|
+  = f.input :registration_key
+  = f.submit 'Check', class: 'btn btn-success'

@@ -79,3 +79,4 @@ gem "money-rails"
 gem 'carrierwave', '~> 1.0'
 gem "fog-aws"
 gem "activeadmin", github: 'activeadmin/activeadmin'
+gem "haikunator"

@@ -1,12 +1,5 @@
 Rails.application.routes.draw do
   ActiveAdmin.routes(self)
-  namespace :accounts do
-    get 'documents/show'
-  end
-
-  namespace :accounts do
-    get 'documents/new'
-  end
 
   namespace :users do
     resource :contact
@@ -26,6 +19,15 @@ Rails.application.routes.draw do
     resources :charges
     resources :documents
     root to: "users#index"
+  end
+
+  namespace :authentication do
+    scope :self_enroll do
+      get '/', to: 'self_enrollment#begin'
+      get '/c', to: 'self_enrollment#check_registration_key', as: 'check_key'
+      get '/set_email', to: 'self_enrollment#select_email'
+      post '/process', to: 'self_enrollment#process_registration'
+    end
   end
 
   get 'welcome/index'

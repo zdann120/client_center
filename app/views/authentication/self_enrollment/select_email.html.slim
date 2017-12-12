@@ -1,0 +1,5 @@
+h1 Choose Your Account Email
+p.lead Your account will be associated with <strong>#{@account.title}</strong>
+= simple_form_for :user, url: authentication_process_path, method: :post do |f|
+  = f.input :email
+  = f.submit 'Create Account', class: 'btn btn-success'

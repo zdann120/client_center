@@ -59,8 +59,6 @@ batch_action_admin_receipt_charges POST   /admin/receipts/:receipt_id/charges/ba
                                    POST   /admin/comments(.:format)                                  admin/comments#create
                      admin_comment GET    /admin/comments/:id(.:format)                              admin/comments#show
                                    DELETE /admin/comments/:id(.:format)                              admin/comments#destroy
-           accounts_documents_show GET    /accounts/documents/show(.:format)                         accounts/documents#show
-            accounts_documents_new GET    /accounts/documents/new(.:format)                          accounts/documents#new
                  new_users_contact GET    /users/contact/new(.:format)                               users/contacts#new
                 edit_users_contact GET    /users/contact/edit(.:format)                              users/contacts#edit
                      users_contact GET    /users/contact(.:format)                                   users/contacts#show
@@ -117,6 +115,10 @@ batch_action_admin_receipt_charges POST   /admin/receipts/:receipt_id/charges/ba
                                    PUT    /admin/documents/:id(.:format)                             admin/documents#update
                                    DELETE /admin/documents/:id(.:format)                             admin/documents#destroy
                                    GET    /admin(.:format)                                           admin/users#index
+                    authentication GET    /authentication/self_enroll(.:format)                      authentication/self_enrollment#begin
+          authentication_check_key GET    /authentication/self_enroll/c/:registration_key(.:format)  authentication/self_enrollment#check_registration_key
+          authentication_set_email GET    /authentication/self_enroll/set_email(.:format)            authentication/self_enrollment#select_email
+            authentication_process POST   /authentication/self_enroll/process(.:format)              authentication/self_enrollment#process_registration
                      welcome_index GET    /welcome/index(.:format)                                   welcome#index
                process_email_token GET    /auth/email/:token(.:format)                               authentication/email#process_token
                             logout DELETE /logout(.:format)                                          authentication/email#logout

@@ -11,5 +11,15 @@ ActiveAdmin.register Account do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
+  permit_params :title, :active, :default_user_id, :registration_key
+
+  form do |f|
+    f.inputs do
+      f.input :default_user
+      f.input :title
+      f.input :active
+    end
+    actions
+  end
 
 end
