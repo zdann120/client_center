@@ -70,7 +70,6 @@ gem "slim-rails"
 gem "sorcery"
 gem "bootstrap"
 gem "active_interaction"
-gem "administrate"
 gem "ulid"
 gem "pundit"
 gem "country_select"
@@ -79,3 +78,4 @@ gem "redis"
 gem "money-rails"
 gem 'carrierwave', '~> 1.0'
 gem "fog-aws"
+gem "activeadmin", github: 'activeadmin/activeadmin'

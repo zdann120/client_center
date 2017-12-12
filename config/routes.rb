@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  ActiveAdmin.routes(self)
   namespace :accounts do
     get 'documents/show'
   end
@@ -19,7 +20,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :users
     resources :accounts
-    resources :contacts, except: [:index]
+    resources :contacts, except: [:create, :new, :destroy]
     resources :receipts do
     end
     resources :charges
