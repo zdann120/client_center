@@ -1,2 +1,9 @@
 h1 Edit Contact Info
+.alert.alert-warning
+  |
+    The following reflects the current contact record for your login.
+- unless @contact.valid?
+  .alert.alert-danger
+    |
+      Your contact data is blank. You must complete it to gain access to your accounts.
 = render 'form'
