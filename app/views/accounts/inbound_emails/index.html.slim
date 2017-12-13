@@ -11,4 +11,4 @@ table.table-sm.table-bordered.table-striped.table-hover
       tr
         td = email.data['From']
         td = email.data['Subject']
-        td = link_to 'View', account_inbound_email_path(@account, email.token)
+        td = link_to 'View', account_inbound_email_path(@account, email.token), target: '_blank'
