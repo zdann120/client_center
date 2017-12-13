@@ -1,0 +1,14 @@
+= render 'accounts/dashboard/nav'
+h1 Inbound Emails
+table.table-sm.table-bordered.table-striped.table-hover
+  thead
+    tr
+      th Sender
+      th Subject
+      th Actions
+  tbody
+    - @emails.each do |email|
+      tr
+        td = email.data['From']
+        td = email.data['Subject']
+        td = link_to 'View', account_inbound_email_path(@account, email.token)

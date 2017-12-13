@@ -3,3 +3,4 @@ ul.nav.nav-tabs.justify-content-center
   li.nav-item = active_link_to 'Appointments Calendar', account_appointments_path(@account.code), class: 'nav-link'
   /li.nav-item = active_link_to  'Documents', '#', class: 'nav-link', active: false
   li.nav-item = active_link_to 'Receipts', account_receipts_path(@account), class: 'nav-link'
+  li.nav-item = active_link_to 'Inbound Emails', account_inbound_emails_path(@account.code), class: 'nav-link'

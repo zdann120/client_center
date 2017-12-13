@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :receipts, controller: 'accounts/receipts',
       only: [:index, :show]
     resources :appointments, on: :member, only: :index, controller: 'accounts/appointments'
+    resources :inbound_emails, only: [:index, :show], controller: 'accounts/inbound_emails'
   end
 
   resources :versions, only: :show
