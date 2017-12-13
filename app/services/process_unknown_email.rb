@@ -1,4 +1,4 @@
-class ProcessAccountEmail < ActiveInteraction::Base
+class ProcessUnknownEmail < ActiveInteraction::Base
   hash :email_hash, strip: false
 
   def execute
