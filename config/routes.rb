@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :accounts, only: [:show], controller: 'accounts/dashboard' do
     resources :receipts, controller: 'accounts/receipts',
       only: [:index, :show]
+    resources :appointments, on: :member, only: :index, controller: 'accounts/appointments'
   end
 
   namespace :admin do

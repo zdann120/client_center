@@ -1,4 +1,12 @@
 FactoryGirl.define do
+  factory :appointment do
+    token ""
+    description "MyString"
+    starts_at "2017-12-12 18:54:10"
+    duration_minutes 1
+    state 1
+    kind "MyString"
+  end
   factory :document do
     account nil
     asset "MyString"
@@ -38,7 +46,7 @@ FactoryGirl.define do
     account nil
     access_level 1
   end
-  factory :account do
+  factory :admin do
     code "MyString"
     title "MyString"
     active false

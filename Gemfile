@@ -80,3 +80,4 @@ gem 'carrierwave', '~> 1.0'
 gem "fog-aws"
 gem "activeadmin", github: 'activeadmin/activeadmin'
 gem "haikunator"
+gem "simple_calendar", "~> 2.0"

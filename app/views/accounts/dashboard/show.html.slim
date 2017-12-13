@@ -1,21 +1,24 @@
 h1 = @account.title
-table.table
-  tr
-    th Account #
-    td = @account.code
-h3 Actions
-.btn-group
-  = link_to 'View Receipts', account_receipts_path(@account),
-    class: 'btn btn-primary btn-lg'
-
-h3 Documents
-table.table
-  thead
-    tr
-      th Description
-      th 
-  tbody
-    - @account.documents.each do |doc|
-      tr
-        td = doc.description
-        td = link_to 'View', doc.asset.url, target: '_blank'
+h4.text-muted Account #: #{@account.code}
+hr
+.row
+  .col-md-3
+    h3 Receipts
+    hr
+    ul
+      - @account.receipts.order(created_at: :desc).limit(5).each do |r|
+        li = link_to r.description, [@account, r]
+      li = link_to "View all...", account_receipts_path(@account)
+  .col-md-9
+    h3 Documents
+    hr
+    table.table.table-sm.table-striped
+      thead
+        tr
+          th Description
+          th
+      tbody
+        - @account.documents.each do |doc|
+          tr
+            td = doc.description
+            td = link_to 'View', doc.asset.url, target: '_blank'

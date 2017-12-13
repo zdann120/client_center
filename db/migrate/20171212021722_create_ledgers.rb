@@ -3,7 +3,7 @@ class CreateLedgers < ActiveRecord::Migration[5.1]
     create_table :ledgers do |t|
       t.string :type
       t.string :reference_code
-      t.references :account, foreign_key: true
+      t.references :admin, foreign_key: true
 
       t.timestamps
     end

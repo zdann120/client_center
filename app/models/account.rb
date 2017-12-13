@@ -6,6 +6,7 @@ class Account < ApplicationRecord
   has_many :users, through: :user_accounts
   has_many :receipts, dependent: :nullify
   has_many :documents, dependent: :nullify
+  has_many :appointments, as: :attendable
   belongs_to :default_user, class_name: 'User',
     foreign_key: 'default_user_id'
 

@@ -5,7 +5,7 @@ class Authentication::Email < ActiveInteraction::Base
 
   def execute
     unless User.exists?(email: email)
-      errors.add(:email, 'is not linked to any account.')
+      errors.add(:email, 'is not linked to any admin.')
       return false
     end
 
