@@ -7,12 +7,26 @@ class Accounts::InboundEmailsController < ApplicationController
 
   def show
     @email = Email.find_by_token params[:id]
-    render :show, layout: false
+    respond_to do |format|
+      format.json do
+        render json: @email.data
+      end
+      format.html do
+        render :show_html, layout: false
+      end
+      format.text do
+        render plain: @email.data['TextBody']
+      end
+    end
   end
 
   def show_html
     @email = Email.find_by_token params[:id]
     render :show_html, layout: false
+  end
+
+  def show_text
+    @email = Email.
   end
 
   private
