@@ -1,4 +1,5 @@
 class Accounts::ReceiptsController < ApplicationController
+  before_action :require_login
   before_action :set_account
   before_action :set_accounts_receipt, only: [:show, :edit, :update, :destroy]
 
@@ -9,6 +10,7 @@ class Accounts::ReceiptsController < ApplicationController
 
   # GET /accounts/receipts/1
   def show
+    authorize @receipt
   end
 
 

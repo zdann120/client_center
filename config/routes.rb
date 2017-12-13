@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     resources :appointments, on: :member, only: :index, controller: 'accounts/appointments'
   end
 
+  resources :versions, only: :show
+
   namespace :admin do
     resources :users
     resources :accounts
