@@ -1,0 +1,19 @@
+p Hello #{@email.data['From']},
+p This is to confirm that your email has been successfully posted to your account.
+p Below are more details for your reference:
+table
+  tr
+    th Subject
+    td = @email.data['Subject']
+  tr
+    th Date
+    td = @email.data['Date']
+  tr
+    th Message ID
+    td = @email.token
+  tr
+    th Content (Plain Text)
+    td = @email.data['TextBody']
+p To view more details, login to your portal at https://portal.zdn.enterprises
+p Best,
+p ZDN Enterprises, LLC.
