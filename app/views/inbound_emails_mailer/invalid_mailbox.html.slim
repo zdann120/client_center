@@ -1,0 +1,19 @@
+p Hello #{@email_hash['From']},
+p The following email was received by our servers and failed to process:
+table
+  tr
+    th Date
+    td = @email_hash['Date']
+  tr
+    th Subject
+    td = @email_hash['Subject']
+  tr
+    th From
+    td = @email_hash['From']
+  tr
+    th To
+    td = @email_hash['To']
+p
+  |
+    Please make sure that you sent the message to the correct mailbox, and then try again.
+    If you continue to receive this error, please contact us.

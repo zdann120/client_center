@@ -16,7 +16,7 @@ class Endpoints::IncomingEmailController < ApplicationController
     if parsed['ToFull'][0]['Email'].split('+')[0] == 'account'
       ProcessAccountEmail
     else
-      false
+      ProcessUnknownEmail
     end
   end
 end
