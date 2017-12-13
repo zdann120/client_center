@@ -5,10 +5,11 @@ table.table-sm.table-bordered.table-striped.table-hover
     tr
       th Sender
       th Subject
-      th Actions
+      th[colspan="2"] Actions
   tbody
     - @emails.each do |email|
       tr
         td = email.data['From']
         td = email.data['Subject']
         td = link_to 'View', account_inbound_email_path(@account.code, email.token), target: '_blank'
+        td = link_to 'HTML', html_account_inbound_email_path(@account.code, email.token), target: '_blank'

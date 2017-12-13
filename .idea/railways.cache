@@ -80,6 +80,7 @@ admin_account_account_appointment_save_appointment POST   /admin/accounts/:accou
                                   account_receipts GET    /accounts/:account_id/receipts(.:format)                                   accounts/receipts#index
                                    account_receipt GET    /accounts/:account_id/receipts/:id(.:format)                               accounts/receipts#show
                               account_appointments GET    /accounts/:account_id/appointments(.:format)                               accounts/appointments#index {:on=>:member}
+                        html_account_inbound_email GET    /accounts/:account_id/inbound_emails/:id/html(.:format)                    accounts/inbound_emails#show_html
                             account_inbound_emails GET    /accounts/:account_id/inbound_emails(.:format)                             accounts/inbound_emails#index
                              account_inbound_email GET    /accounts/:account_id/inbound_emails/:id(.:format)                         accounts/inbound_emails#show
                                            account GET    /accounts/:id(.:format)                                                    accounts/dashboard#show
