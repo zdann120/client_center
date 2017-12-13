@@ -1,0 +1,16 @@
+h1 Viewing Version ID: #{@version.id}
+h2.text-muted Associated Object: #{@version.item.class.name} ##{@version.item.id}
+h3.text-muted Version created at: #{@version.created_at}
+hr
+table.table-sm.table-bordered.table-striped
+  thead.table-dark
+    tr
+      th Column Name
+      th Old Value
+      th New Value
+  tbody
+    - @version.changeset.each do |column, values|
+      tr
+        th.table-info = column.titleize
+        td = values[0]
+        td = values[1]
