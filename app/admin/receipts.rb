@@ -14,7 +14,7 @@ ActiveAdmin.register Receipt do
   #
   form do |f|
     inputs 'Receipt Details' do
-      input :admin
+      input :account
       input :description
     end
     inputs do
@@ -31,7 +31,7 @@ ActiveAdmin.register Receipt do
 
   index do
     selectable_column
-    column :admin
+    column :account
     column :description
     column :created_at
     actions
@@ -39,7 +39,7 @@ ActiveAdmin.register Receipt do
 
   show do
     attributes_table do
-      row :admin
+      row :account
       row :description
       row :reference_code
       row :created_at

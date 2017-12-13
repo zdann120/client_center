@@ -10,3 +10,5 @@ nav.navbar.navbar-expand-md.navbar-dark.bg-dark.fixed-top
           class: 'nav-link'
         li.nav-item = link_to 'Logout', logout_path, method: :delete,
           class: 'nav-link'
+        - if current_user.admin?
+          li.nav-item = link_to 'Admin', admin_root_path, class: 'nav-link'

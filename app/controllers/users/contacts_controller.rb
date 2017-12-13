@@ -1,4 +1,5 @@
 class Users::ContactsController < ApplicationController
+  before_action :set_paper_trail_whodunnit
   def edit
     @contact = current_user.contact
   end

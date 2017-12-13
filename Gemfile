@@ -82,3 +82,4 @@ gem "activeadmin", github: 'activeadmin/activeadmin'
 gem "haikunator"
 gem "simple_calendar", "~> 2.0"
 gem "active_link_to"
+gem "paper_trail", "~> 8.1.1"
