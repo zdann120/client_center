@@ -1,4 +1,9 @@
 FactoryGirl.define do
+  factory :email do
+    emailable nil
+    token ""
+    data ""
+  end
   factory :appointment do
     token ""
     description "MyString"
