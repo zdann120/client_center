@@ -8,6 +8,7 @@ class User < ApplicationRecord
 
   has_many :user_accounts, dependent: :destroy
   has_many :accounts, through: :user_accounts
+  has_many :appointments
   has_one :contact, as: :contactable
 
   accepts_nested_attributes_for :contact
