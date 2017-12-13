@@ -10,6 +10,11 @@ class Accounts::InboundEmailsController < ApplicationController
     render :show, layout: false
   end
 
+  def show_html
+    @email = Email.find_by_token params[:id]
+    render :show_html, layout: false
+  end
+
   private
 
   def set_account

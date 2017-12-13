@@ -9,7 +9,9 @@ Rails.application.routes.draw do
     resources :receipts, controller: 'accounts/receipts',
       only: [:index, :show]
     resources :appointments, on: :member, only: :index, controller: 'accounts/appointments'
-    resources :inbound_emails, only: [:index, :show], controller: 'accounts/inbound_emails'
+    resources :inbound_emails, only: [:index, :show], controller: 'accounts/inbound_emails' do
+      get '/html', on: :member, to: 'accounts/inbound_emails#show_html'
+    end
   end
 
   resources :versions, only: :show
