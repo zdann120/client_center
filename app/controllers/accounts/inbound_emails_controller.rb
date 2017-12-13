@@ -25,10 +25,6 @@ class Accounts::InboundEmailsController < ApplicationController
     render :show_html, layout: false
   end
 
-  def show_text
-    @email = Email.
-  end
-
   private
 
   def set_account
