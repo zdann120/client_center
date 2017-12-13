@@ -81,6 +81,8 @@ admin_account_account_appointment_save_appointment POST   /admin/accounts/:accou
                                    account_receipt GET    /accounts/:account_id/receipts/:id(.:format)                               accounts/receipts#show
                               account_appointments GET    /accounts/:account_id/appointments(.:format)                               accounts/appointments#index {:on=>:member}
                                            account GET    /accounts/:id(.:format)                                                    accounts/dashboard#show
+                                           version GET    /versions/:id(.:format)                                                    versions#show
+                          endpoints_incoming_email POST   /endpoints/incoming_email(.:format)                                        endpoints/incoming_email#process
                                                    GET    /admin/users(.:format)                                                     admin/users#index
                                                    POST   /admin/users(.:format)                                                     admin/users#create
                                                    GET    /admin/users/new(.:format)                                                 admin/users#new

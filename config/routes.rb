@@ -13,6 +13,10 @@ Rails.application.routes.draw do
 
   resources :versions, only: :show
 
+  namespace :endpoints do
+    post 'incoming_email', to: 'incoming_email#execute'
+  end
+
   namespace :admin do
     resources :users
     resources :accounts
