@@ -12,8 +12,8 @@ table
     th Message ID
     td = @email.token
   tr
-    th Content (Plain Text)
-    td = @email.data['TextBody']
+    th = @email.emailable.class.name.titleize
+    td = @email.emailable.try(:title)
 p To view more details, login to your portal at https://portal.zdn.enterprises
 p Best,
 p ZDN Enterprises, LLC.
