@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f233da7-63ef-4d2e-9108-0fb3ab65ecc2" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/accounts/inbound_emails/index.html.slim" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/accounts/inbound_emails/show.html.slim" />
-      <change beforePath="$PROJECT_DIR$/.idea/railways.cache" afterPath="$PROJECT_DIR$/.idea/railways.cache" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/admin/documents.rb" afterPath="$PROJECT_DIR$/app/admin/documents.rb" />
-      <change beforePath="$PROJECT_DIR$/app/views/accounts/dashboard/_nav.html.slim" afterPath="$PROJECT_DIR$/app/views/accounts/dashboard/_nav.html.slim" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -200,8 +194,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="144" />
-    <option name="y" value="23" />
+    <option name="x" value="912" />
+    <option name="y" value="391" />
     <option name="width" value="1680" />
     <option name="height" value="908" />
   </component>
@@ -448,12 +442,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1513109939947</updated>
-      <workItem from="1513109948406" duration="22282000" />
+      <workItem from="1513109948406" duration="22318000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22282000" />
+    <option name="totallyTimeSpent" value="22318000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -465,7 +459,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="144" y="23" width="1680" height="908" extended-state="0" />
+    <frame x="912" y="391" width="1680" height="908" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296433" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
