@@ -9,6 +9,8 @@ class Users::ContactsController < ApplicationController
     if @contact.update(contact_params)
       redirect_to edit_users_contact_url,
         notice: 'Changes saved successfully.'
+    else
+      render :edit
     end
   end
 

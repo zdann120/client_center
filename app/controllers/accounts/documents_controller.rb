@@ -1,4 +1,4 @@
-class Accounts::DocumentsController < ApplicationController
+class Accounts::DocumentsController < Accounts::ApplicationController
   def show
     @account = Account.find(params[:account_id])
     @document = Document.find(params[:id])

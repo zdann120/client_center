@@ -8,4 +8,12 @@ class ApplicationController < ActionController::Base
       redirect_to root_path, alert: 'You are not an admin.'
     end
   end
+
+  def ensure_contact_details
+    if current_user.contact.valid?
+      return true
+    else
+      redirect_to edit_users_contact_url, alert: "Please complete your contact details:"
+    end
+  end
 end
