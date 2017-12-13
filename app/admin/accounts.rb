@@ -22,4 +22,8 @@ ActiveAdmin.register Account do
     actions
   end
 
+  action_item :add_appointment, only: :show do
+    link_to 'Add Appointment', admin_account_account_appointment_path(account)
+  end
+
 end
