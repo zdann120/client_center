@@ -6,8 +6,8 @@ class Accounts::InboundEmailsController < ApplicationController
   end
 
   def show
-    layout false
     @email = Email.find_by_token params[:id]
+    render :show, layout: false
   end
 
   private
