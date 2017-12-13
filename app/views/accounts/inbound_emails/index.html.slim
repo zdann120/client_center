@@ -18,4 +18,4 @@ table.table-sm.table-bordered.table-striped.table-hover
         td = email.data['Subject']
         td = link_to 'JSON', account_inbound_email_path(@account.code, email.token, format: :json), target: '_blank'
         td = link_to 'HTML', account_inbound_email_path(@account.code, email.token, format: :html), target: '_blank'
-        td = link_to 'TXT'. account_inbound_email_path(@account.code, email.token, format: :text), target: '_blank'
+        td = link_to 'TXT', account_inbound_email_path(@account.code, email.token, format: :text), target: '_blank'
