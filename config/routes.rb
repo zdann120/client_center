@@ -38,6 +38,7 @@ Rails.application.routes.draw do
       get '/c', to: 'self_enrollment#check_registration_key', as: 'check_key'
       get '/set_email', to: 'self_enrollment#select_email'
       post '/process', to: 'self_enrollment#process_registration'
+      post '/ajax', to: 'self_enrollment#ajax_enroll'
     end
   end
 

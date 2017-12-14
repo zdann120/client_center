@@ -137,6 +137,7 @@ admin_account_account_appointment_save_appointment POST   /admin/accounts/:accou
                           authentication_check_key GET    /authentication/self_enroll/c(.:format)                                    authentication/self_enrollment#check_registration_key
                           authentication_set_email GET    /authentication/self_enroll/set_email(.:format)                            authentication/self_enrollment#select_email
                             authentication_process POST   /authentication/self_enroll/process(.:format)                              authentication/self_enrollment#process_registration
+                               authentication_ajax POST   /authentication/self_enroll/ajax(.:format)                                 authentication/self_enrollment#ajax_enroll
                                      welcome_index GET    /welcome/index(.:format)                                                   welcome#index
                                process_email_token GET    /auth/email/:token(.:format)                                               authentication/email#process_token
                                             logout DELETE /logout(.:format)                                                          authentication/email#logout

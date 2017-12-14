@@ -2,15 +2,21 @@
   = render 'email_login'
   hr
   - if logged_in?
-    .row
-      .col-md-4
-        h4 Please select an account:
-        p
-          = link_to 'Add Account', authentication_path, class: 'btn btn-sm btn-secondary'
-          br
-          | (requires a registration key)
-      .col-md-8
-        ul.list-group
-          - current_user.accounts.each do |a|
-            li.list-group-item = link_to a.title, account_path(a.code)
+    .card.bg-primary
+      .card-body
+        .row
+          .col-md-4.text-white
+            h4 Please select an account:
+          .col-md-8
+            ul.list-group
+              - current_user.accounts.each do |a|
+                li.list-group-item = link_to a.title, account_path(a.code)
+    hr
+    .card
+      .card-body
+        h4.card-title Enroll in a new account:
+        = simple_form_for :account, url: authentication_ajax_path, remote: true, method: :post do |f|
+          = f.input :registration_key
+          = f.submit
+        #enrollment-message
 

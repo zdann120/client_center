@@ -32,4 +32,14 @@ class Authentication::SelfEnrollmentController < ApplicationController
       render :select_email
     end
   end
+
+  def ajax_enroll
+    require_login
+    @user = current_user
+    @account = Account.find_by_registration_key(params[:account][:registration_key])
+    return unless @account
+    unless @account.users.include?(@user)
+      @user.accounts << @account
+    end
+  end
 end
