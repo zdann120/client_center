@@ -8,7 +8,7 @@ class AccountPolicy < ApplicationPolicy
   end
 
   def registration_invite?
-    record.users.include?(user)
+    record.users.include?(user) || user.admin?
   end
 
   class Scope < Scope
