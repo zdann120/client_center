@@ -31,7 +31,7 @@ class Account < ApplicationRecord
   def set_registration_key
     self.registration_key = loop do
       #haiku = Haikunator.haikunate
-      haiku = Cannabinator.cannabinator
+      haiku = Cannabinator.cannabinate
       break haiku unless Account.exists?(registration_key: haiku)
     end
   end

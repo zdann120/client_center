@@ -21,7 +21,7 @@ class User < ApplicationRecord
 
   def to_s
     return full_name if full_name
-    email
+    return self.email
   end
 
   def full_name
