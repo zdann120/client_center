@@ -17,6 +17,6 @@
         h4.card-title Enroll in a new account:
         = simple_form_for :account, url: authentication_ajax_path, remote: true, method: :post do |f|
           = f.input :registration_key
-          = f.submit
+          = f.submit 'Enroll', class: 'btn btn-secondary btn-sm'
         #enrollment-message
 
