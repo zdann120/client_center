@@ -2,13 +2,17 @@
   h1 Welcome, #{current_user}!
 - else
   h1 Welcome to ZDN Enterprises, LLC.
-  p.lead
-    | Enter the email address that you typically use to contact ZDN
-      Enterprises, LLC.
-  = simple_form_for Authentication::Email.new, url: login_email_path do |f|
-    = f.input :email
-    = f.submit 'Login', class: 'btn btn-primary'
   hr
-  p.lead
-    ' Have a registration key?
-    = link_to 'CLICK HERE', authentication_path
+  .row
+    .col-md-6
+      .card
+        .card-body
+          h4.card-title Returning users:
+          = simple_form_for Authentication::Email.new, url: login_email_path do |f|
+            = f.input :email
+            = f.submit 'Login', class: 'btn btn-primary'
+    .col-md-6
+      .card
+        .card-body
+          h4.card-title First Time Users
+          = link_to 'Begin Enrollment', authentication_path, class: 'btn btn-success'
