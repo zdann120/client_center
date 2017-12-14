@@ -22,3 +22,6 @@ hr
           tr
             td = doc.description
             td = link_to 'View', doc.asset.url, target: '_blank'
+hr
+  = link_to 'Registration Instructions', invite_account_path(@account.code, format: :pdf),
+          class: 'btn btn-sm btn-secondary'

@@ -77,6 +77,7 @@ admin_account_account_appointment_save_appointment POST   /admin/accounts/:accou
                                                    PUT    /users/contact(.:format)                                                   users/contacts#update
                                                    DELETE /users/contact(.:format)                                                   users/contacts#destroy
                                                    POST   /users/contact(.:format)                                                   users/contacts#create
+                                    invite_account GET    /accounts/:id/invite(.:format)                                             accounts/dashboard#registration_invite
                                   account_receipts GET    /accounts/:account_id/receipts(.:format)                                   accounts/receipts#index
                                    account_receipt GET    /accounts/:account_id/receipts/:id(.:format)                               accounts/receipts#show
                               account_appointments GET    /accounts/:account_id/appointments(.:format)                               accounts/appointments#index {:on=>:member}

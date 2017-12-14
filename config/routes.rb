@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   end
 
   resources :accounts, only: [:show], controller: 'accounts/dashboard' do
+    get '/invite', on: :member, to: 'accounts/dashboard#registration_invite'
     resources :receipts, controller: 'accounts/receipts',
       only: [:index, :show]
     resources :appointments, on: :member, only: :index, controller: 'accounts/appointments'
