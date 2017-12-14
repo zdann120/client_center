@@ -8,7 +8,7 @@ class Authentication::SelfEnroll < ActiveInteraction::Base
 
     account = Account.find_by_registration_key(account_registration_key)
 
-    #errors.add(:user, 'already exists') if User.exists?(email: email)
+    errors.add(:user, 'already exists. Please login before enrolling additional accounts.') if User.exists?(email: email)
     errors.add(:account_registration_key, 'is invalid.') unless !!account
 
     return if errors.any?
