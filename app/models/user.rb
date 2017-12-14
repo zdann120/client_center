@@ -21,7 +21,7 @@ class User < ApplicationRecord
 
   def to_s
     if !!full_name
-      full_name
+      full_name + "(#{email})"
     else
       self.email
     end
@@ -29,9 +29,9 @@ class User < ApplicationRecord
 
   def full_name
     if contact && !first_name.blank? && !last_name.blank?
-      "#{first_name} #{last_name}"
+      "#{first_name} #{last_name} (#{email})"
     else
-      false
+      email
     end
   end
 
