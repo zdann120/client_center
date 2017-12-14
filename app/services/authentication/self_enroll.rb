@@ -8,14 +8,20 @@ class Authentication::SelfEnroll < ActiveInteraction::Base
 
     account = Account.find_by_registration_key(account_registration_key)
 
-    errors.add(:user, 'already exists') if User.exists?(email: email)
+    #errors.add(:user, 'already exists') if User.exists?(email: email)
     errors.add(:account_registration_key, 'is invalid.') unless !!account
 
     return if errors.any?
 
-    user = User.create(email: email, role: 'client')
-    errors.merge!(user.errors) if user.errors.any?
-    user.accounts << account
-    return user
+    if User.exists?(email: email)
+      user = User.find_by_email(email)
+      user.accounts << account unless user.accounts.include?(account)
+      return user
+    else
+      user = User.create(email: email, role: 'client')
+      errors.merge!(user.errors) if user.errors.any?
+      user.accounts << account
+      return user
+    end
   end
 end

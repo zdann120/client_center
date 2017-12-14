@@ -26,6 +26,7 @@ class Authentication::SelfEnrollmentController < ApplicationController
     @outcome = Authentication::SelfEnroll.run(email: params[:user][:email], account_registration_key: @account.registration_key)
     if @outcome.valid?
       redirect_to root_url, notice: 'You have successfully enrolled.'
+      session[:self_enroll_account_id] = nil
     else
       flash[:notice] = "#{@outcome.errors.count} error(s): #{@outcome.errors.full_messages.join(', ')}"
       render :select_email
