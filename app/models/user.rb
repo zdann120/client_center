@@ -21,7 +21,7 @@ class User < ApplicationRecord
 
   def to_s
     if !!full_name
-      full_name + "(#{email})"
+      full_name
     else
       self.email
     end
