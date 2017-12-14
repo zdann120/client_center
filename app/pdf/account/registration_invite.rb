@@ -34,7 +34,7 @@ class Account::RegistrationInvite
       move_down 5
       text 'To activate your account:'
       text '1) Visit https://portal.zdn.enterprises'
-      text '2) Click the link to indicate you have a Registration Key'
+      text '2) Click the link to begin enrollment.'
       text '3) When prompted, enter your registration key:'
       text @account.registration_key, size: 18, style: :bold, align: :center
       text '4) Enter your email address when prompted to complete your enrollment.'
