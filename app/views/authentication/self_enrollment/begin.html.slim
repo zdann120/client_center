@@ -1,4 +1,9 @@
 h1 Client Portal Self-Enrollment
+.alert.alert-info
+  | You should use this form if:
+  ul
+    li You are a new user accessing the site for the first time.
+    li You are an existing user who wants to connect to additional accounts.
 = simple_form_for :admin, url: authentication_check_key_path, method: :get do |f|
   = f.input :registration_key
   = f.submit 'Check', class: 'btn btn-success'
