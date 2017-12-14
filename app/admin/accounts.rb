@@ -26,4 +26,8 @@ ActiveAdmin.register Account do
     link_to 'Add Appointment', admin_account_account_appointment_path(account)
   end
 
+  action_item :print_invite, only: :show do
+    link_to 'Print Invite', invite_account_path(account.code, format: :pdf), target: '_blank'
+  end
+
 end

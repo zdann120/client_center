@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f233da7-63ef-4d2e-9108-0fb3ab65ecc2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/pdf/account/registration_invite.rb" afterPath="$PROJECT_DIR$/app/pdf/account/registration_invite.rb" />
+      <change beforePath="$PROJECT_DIR$/app/admin/accounts.rb" afterPath="$PROJECT_DIR$/app/admin/accounts.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -145,11 +144,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="registration_invite.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="registration_invite.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/pdf/account/registration_invite.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
               <caret line="58" column="110" lean-forward="false" selection-start-line="58" selection-start-column="110" selection-end-line="58" selection-end-column="110" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="accounts.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/admin/accounts.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="29" column="91" lean-forward="false" selection-start-line="29" selection-start-column="91" selection-end-line="29" selection-end-column="91" />
               <folding />
             </state>
           </provider>
@@ -175,7 +184,6 @@
       <list>
         <option value="$PROJECT_DIR$/app/views/admin/accounts/account_appointments.html.slim" />
         <option value="$PROJECT_DIR$/app/admin/account_appointment.rb" />
-        <option value="$PROJECT_DIR$/app/admin/accounts.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/app/views/admin/accounts/_appointment_form.html.slim" />
         <option value="$PROJECT_DIR$/app/views/accounts/receipts/index.html.slim" />
@@ -224,6 +232,7 @@
         <option value="$PROJECT_DIR$/app/policies/account_policy.rb" />
         <option value="$PROJECT_DIR$/app/views/accounts/dashboard/show.html.slim" />
         <option value="$PROJECT_DIR$/app/pdf/account/registration_invite.rb" />
+        <option value="$PROJECT_DIR$/app/admin/accounts.rb" />
       </list>
     </option>
   </component>
@@ -286,6 +295,12 @@
               <item name="client_center" type="b2602c69:ProjectViewProjectNode" />
               <item name="client_center" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="client_center" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client_center" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="client_center" type="b2602c69:ProjectViewProjectNode" />
@@ -473,12 +488,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1513109939947</updated>
-      <workItem from="1513109948406" duration="32389000" />
+      <workItem from="1513109948406" duration="32547000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32389000" />
+    <option name="totallyTimeSpent" value="32547000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -603,14 +618,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="11" lean-forward="false" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin/accounts.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="68" lean-forward="false" selection-start-line="25" selection-start-column="68" selection-end-line="25" selection-end-column="68" />
           <folding />
         </state>
       </provider>
@@ -930,6 +937,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="58" column="110" lean-forward="false" selection-start-line="58" selection-start-column="110" selection-end-line="58" selection-end-column="110" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/accounts.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="91" lean-forward="false" selection-start-line="29" selection-start-column="91" selection-end-line="29" selection-end-column="91" />
           <folding />
         </state>
       </provider>
