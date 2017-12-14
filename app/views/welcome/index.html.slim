@@ -5,11 +5,12 @@
     .row
       .col-md-4
         h4 Please select an account:
-      .col-md-8
-        ul
-          - current_user.accounts.each do |a|
-            li = link_to a.title, account_path(a.code)
         p
           = link_to 'Add Account', authentication_path, class: 'btn btn-sm btn-secondary'
           br
           | (requires a registration key)
+      .col-md-8
+        ul.list-group
+          - current_user.accounts.each do |a|
+            li.list-group-item = link_to a.title, account_path(a.code)
+

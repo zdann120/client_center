@@ -1,27 +1,29 @@
 = render partial: 'nav'
-h4.text-muted Account #: #{@account.code}
+
 hr
 .row
-  .col-md-3
-    h3 Receipts
-    hr
-    ul
-      - @account.receipts.order(created_at: :desc).limit(5).each do |r|
-        li = link_to r.description, [@account, r]
-      li = link_to "View all...", account_receipts_path(@account)
-  .col-md-9
-    h3 Documents
-    hr
-    table.table.table-sm.table-striped
-      thead
-        tr
-          th Description
-          th
-      tbody
-        - @account.documents.each do |doc|
-          tr
-            td = doc.description
-            td = link_to 'View', doc.asset.url, target: '_blank'
+  .col-md-4
+    .card
+      .card-body
+        h3 Receipts
+        ul
+          - @account.receipts.order(created_at: :desc).limit(5).each do |r|
+            li = link_to r.description, [@account, r]
+          li = link_to "View all...", account_receipts_path(@account)
+  .col-md-8
+    .card
+      .card-body
+        h3.card-title Documents
+        table.table.table-sm.table-striped
+          thead
+            tr
+              th Description
+              th
+          tbody
+            - @account.documents.each do |doc|
+              tr
+                td = doc.description
+                td = link_to 'View', doc.asset.url, target: '_blank'
 hr
   = link_to 'Registration Instructions', invite_account_path(@account.code, format: :pdf),
           class: 'btn btn-sm btn-secondary'

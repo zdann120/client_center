@@ -1,6 +1,16 @@
 = render partial: 'accounts/dashboard/nav'
-h1 View Receipt
-p.lead = @receipt.description
+table.table
+  thead.text-center.table-dark
+    tr
+      th[colspan="2"] Receipt
+  tbody
+    tr
+      th Number
+      td = @receipt.id
+    tr
+      th Description
+      td = @receipt.description
+
 h4 Line Items
 table.table
   thead

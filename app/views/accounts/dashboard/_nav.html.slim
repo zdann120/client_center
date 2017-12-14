@@ -1,3 +1,4 @@
+h4.text-muted.text-center Account #: #{@account.code}
 ul.nav.nav-tabs.justify-content-center
   li.nav-item = active_link_to @account.title, account_path(@account.code), class: 'nav-link', active: :exact
   li.nav-item = active_link_to 'Appointments Calendar', account_appointments_path(@account.code), class: 'nav-link'

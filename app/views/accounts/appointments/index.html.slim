@@ -1,5 +1,4 @@
 = render partial: 'accounts/dashboard/nav'
-h1 Appointment Schedule
 = month_calendar(attribute: :starts_at, events: @appointments) do |date, meetings|
   = date
   ul

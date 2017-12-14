@@ -1,12 +1,13 @@
 = render 'accounts/dashboard/nav'
-h1 Inbound Emails
+.alert.alert-info
+  | Send messages to the account email address, and they will be stored here.
 table.table-sm
   tr
-    th Your Email Address
+    th Account Email Address
   tr
     td
       pre account+#{@account.code}@portal.zdn.enterprises
-table.table-sm.table-bordered.table-striped.table-hover
+table.table.table-sm.table-bordered.table-striped.table-hover
   thead
     tr
       th Sender
