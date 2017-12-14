@@ -7,12 +7,12 @@
     .col-md-6
       .card
         .card-body
-          h4.card-title Returning users:
+          h4.card-title Already enrolled?
           = simple_form_for Authentication::Email.new, url: login_email_path do |f|
             = f.input :email
             = f.submit 'Login', class: 'btn btn-primary'
     .col-md-6
       .card
         .card-body
-          h4.card-title First Time Users
+          h4.card-title Need to enroll?
           = link_to 'Begin Enrollment', authentication_path, class: 'btn btn-success'
