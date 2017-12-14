@@ -11,13 +11,22 @@ ActiveAdmin.register Account do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
-  permit_params :title, :active, :default_user_id, :registration_key
+  permit_params :title, :active, :default_user_id, :registration_key,
+                action_items_attributes: [:description, :urgent, :completed, :id]
 
   form do |f|
     f.inputs do
       f.input :default_user
       f.input :title
       f.input :active
+    end
+
+    f.inputs do
+      f.has_many :action_items, allow_destroy: true do |ai|
+        ai.input :description
+        ai.input :urgent
+        ai.input :completed
+      end
     end
     actions
   end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171213061543) do
+ActiveRecord::Schema.define(version: 20171214013950) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,17 @@ ActiveRecord::Schema.define(version: 20171213061543) do
     t.index ["code"], name: "index_accounts_on_code", unique: true
     t.index ["registration_key"], name: "index_accounts_on_registration_key", unique: true
     t.index ["title"], name: "index_accounts_on_title", unique: true
+  end
+
+  create_table "action_items", force: :cascade do |t|
+    t.string "actor_type"
+    t.bigint "actor_id"
+    t.text "description", default: "f", null: false
+    t.boolean "urgent", default: false, null: false
+    t.boolean "completed", default: false, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["actor_type", "actor_id"], name: "index_action_items_on_actor_type_and_actor_id"
   end
 
   create_table "active_admin_comments", force: :cascade do |t|

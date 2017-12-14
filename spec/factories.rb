@@ -1,4 +1,10 @@
 FactoryGirl.define do
+  factory :action_item do
+    actor nil
+    description "MyText"
+    urgent false
+    completed false
+  end
   factory :email do
     emailable nil
     token ""
