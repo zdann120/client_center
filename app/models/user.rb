@@ -20,8 +20,11 @@ class User < ApplicationRecord
 
 
   def to_s
-    return full_name if full_name
-    return self.email
+    if !!full_name
+      full_name
+    else
+      self.email
+    end
   end
 
   def full_name
