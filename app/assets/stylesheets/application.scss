@@ -15,3 +15,8 @@
 .alert-alert {
   @extend .alert-warning;
 }
+
+#login-response {
+  color: darkblue;
+  font-weight: bold;
+}

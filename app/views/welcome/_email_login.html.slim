@@ -8,7 +8,8 @@
       .card
         .card-body
           h4.card-title Already enrolled?
-          = simple_form_for Authentication::Email.new, url: login_email_path do |f|
+          #login-response
+          = simple_form_for Authentication::Email.new, url: login_email_path, remote: true, method: :post do |f|
             = f.input :email
             = f.submit 'Login', class: 'btn btn-primary'
     .col-md-6

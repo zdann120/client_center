@@ -1,0 +1,5 @@
+<% if @outcome.valid? %>
+  $("#login-response").html("Success! Please check your email.");
+<% else %>
+  $("#login-response").html("This email is not enrolled.");
+<% end %>

@@ -2,11 +2,17 @@ class Authentication::EmailController < ApplicationController
   rescue_from ActiveInteraction::InvalidInteractionError,
     with: :invalid_interaction
   def create
-    @outcome = Authentication::Email.run!(login_params)
-    if @outcome
-      redirect_to root_url, notice: "Success! Please check your email."
-    else
-      redirect_to root_url, notice: "Sorry, the email address you provided is not enrolled. Please try again, or contact us if you believe this is an error."
+    @outcome = Authentication::Email.run(login_params)
+    respond_to do |format|
+      format.html do
+        if @outcome.valid?
+          redirect_to root_url, notice: "Success! Please check your email."
+        else
+          redirect_to root_url, notice: "Sorry, the email address you provided is not enrolled. Please try again, or contact us if you believe this is an error."
+        end
+      end
+
+      format.js
     end
   end
 
