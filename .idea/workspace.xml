@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f233da7-63ef-4d2e-9108-0fb3ab65ecc2" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/authentication/self_enrollment/ajax_enroll.js.erb" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5557be91-57a8-4811-8636-67823dd8732d.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/5557be91-57a8-4811-8636-67823dd8732d.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5557be91-57a8-4811-8636-67823dd8732d/storage_v2/_src_/database/portal.bIhwxQ/schema/public.abK9xQ.meta" afterPath="$PROJECT_DIR$/.idea/dataSources/5557be91-57a8-4811-8636-67823dd8732d/storage_v2/_src_/database/portal.bIhwxQ/schema/public.abK9xQ.meta" />
-      <change beforePath="$PROJECT_DIR$/.idea/railways.cache" afterPath="$PROJECT_DIR$/.idea/railways.cache" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/authentication/email_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/authentication/email_controller.rb" />
       <change beforePath="$PROJECT_DIR$/app/controllers/authentication/self_enrollment_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/authentication/self_enrollment_controller.rb" />
-      <change beforePath="$PROJECT_DIR$/app/views/welcome/index.html.slim" afterPath="$PROJECT_DIR$/app/views/welcome/index.html.slim" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -112,11 +107,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="self_enrollment_controller.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="self_enrollment_controller.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/authentication/self_enrollment_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="39" column="10" lean-forward="false" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
+            <state relative-caret-position="363">
+              <caret line="50" column="30" lean-forward="false" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="email_controller.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/authentication/email_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="6" lean-forward="false" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -132,7 +137,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.slim" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html.slim" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/welcome/index.html.slim">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
@@ -155,7 +160,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/application/_navbar.html.slim" />
         <option value="$PROJECT_DIR$/app/admin/receipts.rb" />
         <option value="$PROJECT_DIR$/app/models/contact.rb" />
         <option value="$PROJECT_DIR$/app/views/versions/show.html.slim" />
@@ -203,9 +207,10 @@
         <option value="$PROJECT_DIR$/app/controllers/accounts/dashboard_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/welcome_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/authentication/self_enrollment_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/authentication/self_enrollment/ajax_enroll.js.erb" />
         <option value="$PROJECT_DIR$/app/views/welcome/index.html.slim" />
+        <option value="$PROJECT_DIR$/app/controllers/authentication/email_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/authentication/self_enrollment_controller.rb" />
       </list>
     </option>
   </component>
@@ -268,6 +273,19 @@
               <item name="client_center" type="b2602c69:ProjectViewProjectNode" />
               <item name="client_center" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="client_center" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client_center" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="client_center" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client_center" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="authentication" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="client_center" type="b2602c69:ProjectViewProjectNode" />
@@ -454,12 +472,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1513109939947</updated>
-      <workItem from="1513109948406" duration="39502000" />
+      <workItem from="1513109948406" duration="40022000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39502000" />
+    <option name="totallyTimeSpent" value="40022000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -508,14 +526,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="86" lean-forward="false" selection-start-line="15" selection-start-column="86" selection-end-line="15" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/accounts/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -891,14 +901,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/authentication/self_enrollment_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="39" column="10" lean-forward="false" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/authentication/self_enrollment/ajax_enroll.js.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -911,6 +913,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="29" lean-forward="false" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/authentication/email_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="6" lean-forward="false" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/authentication/self_enrollment_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="50" column="30" lean-forward="false" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
           <folding />
         </state>
       </provider>

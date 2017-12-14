@@ -6,7 +6,7 @@ class Authentication::EmailController < ApplicationController
     if @outcome
       redirect_to root_url, notice: "Success! Please check your email."
     else
-      redirect_to root_url, notice: "Sorry, the email address you provided was not located in our records. Please try again, or contact us if you believe this is an error."
+      redirect_to root_url, notice: "Sorry, the email address you provided is not enrolled. Please try again, or contact us if you believe this is an error."
     end
   end
 

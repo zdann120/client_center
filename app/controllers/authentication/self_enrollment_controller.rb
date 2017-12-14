@@ -1,4 +1,6 @@
 class Authentication::SelfEnrollmentController < ApplicationController
+  before_action :only_for_signed_out_users, except: [:ajax_enroll]
+
   def begin
   end
 
@@ -41,5 +43,11 @@ class Authentication::SelfEnrollmentController < ApplicationController
     unless @account.users.include?(@user)
       @user.accounts << @account
     end
+  end
+
+  private
+
+  def only_for_signed_out_users
+    redirect_to root_url, alert: 'Please use the form on this page to enroll an additional account.' if current_user
   end
 end
