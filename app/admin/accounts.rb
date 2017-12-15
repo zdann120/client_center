@@ -12,7 +12,7 @@ ActiveAdmin.register Account do
 #   permitted
 # end
   permit_params :title, :active, :default_user_id, :registration_key,
-                action_items_attributes: [:description, :urgent, :completed, :id]
+                action_items_attributes: [:description, :urgent, :completed, :id, :_destroy]
 
   show do
     attributes_table do
