@@ -1,7 +1,20 @@
                                             Prefix Verb   URI Pattern                                                                Controller#Action
+                           accounts_invoices_index GET    /accounts/invoices/index(.:format)                                         accounts/invoices#index
+                            accounts_invoices_show GET    /accounts/invoices/show(.:format)                                          accounts/invoices#show
                                         admin_root GET    /admin(.:format)                                                           admin/dashboard#index
                  admin_account_account_appointment GET    /admin/accounts/:account_id/account_appointment(.:format)                  admin/account_appointment#index
 admin_account_account_appointment_save_appointment POST   /admin/accounts/:account_id/account_appointment/save_appointment(.:format) admin/account_appointment#save_appointment
+                   mark_complete_admin_action_item PUT    /admin/action_items/:id/mark_complete(.:format)                            admin/action_items#mark_complete
+                 mark_incomplete_admin_action_item PUT    /admin/action_items/:id/mark_incomplete(.:format)                          admin/action_items#mark_incomplete
+                   batch_action_admin_action_items POST   /admin/action_items/batch_action(.:format)                                 admin/action_items#batch_action
+                                admin_action_items GET    /admin/action_items(.:format)                                              admin/action_items#index
+                                                   POST   /admin/action_items(.:format)                                              admin/action_items#create
+                             new_admin_action_item GET    /admin/action_items/new(.:format)                                          admin/action_items#new
+                            edit_admin_action_item GET    /admin/action_items/:id/edit(.:format)                                     admin/action_items#edit
+                                 admin_action_item GET    /admin/action_items/:id(.:format)                                          admin/action_items#show
+                                                   PATCH  /admin/action_items/:id(.:format)                                          admin/action_items#update
+                                                   PUT    /admin/action_items/:id(.:format)                                          admin/action_items#update
+                                                   DELETE /admin/action_items/:id(.:format)                                          admin/action_items#destroy
                                    admin_dashboard GET    /admin/dashboard(.:format)                                                 admin/dashboard#index
                    batch_action_admin_appointments POST   /admin/appointments/batch_action(.:format)                                 admin/appointments#batch_action
                                 admin_appointments GET    /admin/appointments(.:format)                                              admin/appointments#index
@@ -84,6 +97,10 @@ admin_account_account_appointment_save_appointment POST   /admin/accounts/:accou
                         html_account_inbound_email GET    /accounts/:account_id/inbound_emails/:id/html(.:format)                    accounts/inbound_emails#show_html
                             account_inbound_emails GET    /accounts/:account_id/inbound_emails(.:format)                             accounts/inbound_emails#index
                              account_inbound_email GET    /accounts/:account_id/inbound_emails/:id(.:format)                         accounts/inbound_emails#show
+                      import_xero_account_invoices GET    /accounts/:account_id/invoices/import/xero(.:format)                       invoices/imports#new_xero
+                                                   POST   /accounts/:account_id/invoices/import/xero(.:format)                       invoices/imports#process_xero
+                                  account_invoices GET    /accounts/:account_id/invoices(.:format)                                   accounts/invoices#index
+                                   account_invoice GET    /accounts/:account_id/invoices/:id(.:format)                               accounts/invoices#show
                                            account GET    /accounts/:id(.:format)                                                    accounts/dashboard#show
                                            version GET    /versions/:id(.:format)                                                    versions#show
                           endpoints_incoming_email POST   /endpoints/incoming_email(.:format)                                        endpoints/incoming_email#execute

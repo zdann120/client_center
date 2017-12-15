@@ -10,4 +10,7 @@ class Contact < ApplicationRecord
             :country, presence: true, unless: :new_record?
 
   delegate :email, to: :contactable
+
+  phony_normalize :primary_phone, default_country_code: 'US'
+  phony_normalize :alternate_phone, default_country_code: 'US'
 end

@@ -13,6 +13,11 @@ Rails.application.routes.draw do
     resources :inbound_emails, only: [:index, :show], controller: 'accounts/inbound_emails' do
       get '/html', on: :member, to: 'accounts/inbound_emails#show_html'
     end
+
+    resources :invoices, only: [:index, :show], controller: 'accounts/invoices' do
+      get 'import/xero', on: :collection, to: 'invoices/imports#new_xero'
+      post 'import/xero', on: :collection, to: 'invoices/imports#process_xero'
+    end
   end
 
   resources :versions, only: :show

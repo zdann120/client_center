@@ -1,7 +1,7 @@
 = semantic_form_for Appointment.new, url: admin_account_account_appointment_save_appointment_path(@account), builder: ActiveAdmin::FormBuilder do |f|
   = f.inputs
     = f.input :description
-    = f.input :starts_at, as: :datepicker
+    = f.input :starts_at, ampm: true
     = f.input :state
     = f.input :kind
   = f.submit

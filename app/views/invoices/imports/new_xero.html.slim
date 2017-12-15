@@ -1,0 +1,5 @@
+= render 'accounts/dashboard/nav'
+h4 Import Xero Invoice
+= simple_form_for :upload, url: import_xero_account_invoices_path(@account.code) do |f|
+  = f.input :file, as: :file
+  = f.submit "Import", class: 'btn btn-primary'

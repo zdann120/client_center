@@ -1,0 +1,35 @@
+= render 'accounts/dashboard/nav'
+table.table
+  - if !@invoice.xero_invoice_number.blank?
+    tr
+      th Xero Invoice Number
+      td = @invoice.xero_invoice_number
+    tr
+      th Due Date
+      td = @invoice.due_date
+    tr
+      th Invoice Date
+      td = @invoice.invoice_date
+  tr
+    th Subtotal
+    td = @invoice.subtotal.format
+hr
+h4 Line Items
+table.table.table-sm
+  thead
+    tr
+      th Description
+      th Unit Price
+      th
+      th Quantity
+      th UOM
+      th Line Total
+  tbody
+    - @invoice.line_items.each do |item|
+      tr
+        td = item.description
+        td = item.unit_price.format
+        td &times;
+        td = item.quantity
+        td = item.unit_of_measure
+        td = item.line_total.format

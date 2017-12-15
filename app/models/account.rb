@@ -9,6 +9,7 @@ class Account < ApplicationRecord
   has_many :appointments, as: :attendable
   has_many :emails, as: :emailable, dependent: :nullify
   has_many :action_items, as: :actor, dependent: :destroy
+  has_many :invoices
   belongs_to :default_user, class_name: 'User',
     foreign_key: 'default_user_id', optional: true
 

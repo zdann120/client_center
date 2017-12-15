@@ -1,0 +1,13 @@
+= render 'accounts/dashboard/nav'
+table.table
+  thead
+    tr
+      th Description
+      th Subtotal
+      th Actions
+  tbody
+    - @invoices.each do |invoice|
+      tr
+        td = invoice.description
+        td = invoice.subtotal.format
+        td = link_to 'View', account_invoice_path(@account.code, invoice)

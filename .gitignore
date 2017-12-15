@@ -17,3 +17,4 @@
 /tmp/*
 /yarn-error.log
 dump.rdb
+/public/INV-0013.csv
