@@ -28,11 +28,9 @@ hr
   .card
     .card-body
       h3.card-title Items Requiring Attention
-      ul.list-group
-        - @account.action_items.where(completed: false).each do |ai|
-          li.list-group-item
-            = ai.urgent? ? '[!]' : nil
-            = ai.description
+      - @account.action_items.where(completed: false).each do |ai|
+        div[class="alert alert-#{ai.urgent? ? 'danger' : 'warning' }"]
+          = ai.description
 hr
   = link_to 'Registration Instructions', invite_account_path(@account.code, format: :pdf),
           class: 'btn btn-sm btn-secondary'
